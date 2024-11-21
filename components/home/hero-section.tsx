@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { ProfileImage } from "../ui/profile-image";
 import { SocialLinks } from "../ui/social-links";
 import { DownloadCV } from "../ui/download-cv";
+import CONFIG from "@/app-config";
 
 export function HeroSection() {
   const containerVariants = {
@@ -27,6 +28,8 @@ export function HeroSection() {
     }
   };
 
+  const { name, telegram, discord, twitter, role, photo } = CONFIG
+
   return (
     <motion.div
       variants={containerVariants}
@@ -34,17 +37,17 @@ export function HeroSection() {
       animate="visible"
       className="flex flex-col items-center justify-center min-h-screen px-4 py-16 space-y-8 pt-24"
     >
-      <ProfileImage />
-      
-      <motion.div 
+      <ProfileImage photo={photo} />
+
+      <motion.div
         variants={itemVariants}
         className="text-center space-y-4"
       >
         <h1 className="text-4xl md:text-6xl font-bold text-zinc-800">
-          Dano Crypt
+          {name}
         </h1>
         <h2 className="text-xl md:text-2xl text-zinc-600 font-medium">
-          KOL and Project Ambassador
+          {role}
         </h2>
       </motion.div>
 
@@ -52,7 +55,7 @@ export function HeroSection() {
         variants={itemVariants}
         className="max-w-2xl text-center text-zinc-600"
       >
-        Bridging the gap between innovative blockchain projects and their communities. 
+        Bridging the gap between innovative blockchain projects and their communities.
         Passionate about creating meaningful connections in the Web3 space.
       </motion.p>
 
@@ -60,7 +63,7 @@ export function HeroSection() {
         variants={itemVariants}
         className="flex flex-col sm:flex-row items-center gap-6"
       >
-        <SocialLinks />
+        <SocialLinks links={{ discord, twitter, telegram }} />
         <DownloadCV />
       </motion.div>
     </motion.div>

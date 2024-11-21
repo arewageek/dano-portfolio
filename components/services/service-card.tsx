@@ -1,5 +1,6 @@
 "use client";
 
+import CONFIG from "@/app-config";
 import { motion } from "framer-motion";
 import { ReactNode } from "react";
 
@@ -14,12 +15,12 @@ interface ServiceCardProps {
 
 export function ServiceCard({ icon, title, description, gradient, bgAccent, index }: ServiceCardProps) {
   const cardVariants = {
-    hidden: { 
+    hidden: {
       opacity: 0,
       y: 50,
       scale: 0.9
     },
-    visible: { 
+    visible: {
       opacity: 1,
       y: 0,
       scale: 1,
@@ -50,7 +51,7 @@ export function ServiceCard({ icon, title, description, gradient, bgAccent, inde
     >
       {/* Animated Border */}
       <div className={`absolute -inset-0.5 bg-gradient-to-r ${gradient} rounded-2xl opacity-75 blur group-hover:opacity-100 transition duration-300`} />
-      
+
       {/* Card Content */}
       <div className={`relative h-full bg-[#eee5d3]/95 backdrop-blur-sm rounded-2xl p-8 shadow-xl ${bgAccent} transition-all duration-300 group-hover:shadow-2xl border border-zinc-800/10`}>
         {/* Icon Container */}
@@ -69,12 +70,12 @@ export function ServiceCard({ icon, title, description, gradient, bgAccent, inde
         </p>
 
         {/* Learn More Button */}
-        <motion.button
+        <motion.a href={CONFIG.telegram}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           className={`inline-flex items-center text-zinc-800 font-semibold group-hover:text-transparent group-hover:bg-gradient-to-r ${gradient} group-hover:bg-clip-text transition-all duration-300`}
         >
-          Explore Service
+          Request Service
           <svg
             className={`ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300`}
             fill="none"
@@ -88,7 +89,7 @@ export function ServiceCard({ icon, title, description, gradient, bgAccent, inde
               d="M13 7l5 5m0 0l-5 5m5-5H6"
             />
           </svg>
-        </motion.button>
+        </motion.a>
       </div>
     </motion.div>
   );

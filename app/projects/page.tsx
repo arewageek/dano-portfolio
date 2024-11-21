@@ -1,19 +1,19 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ProjectCard } from "@/components/resume/project-card";
+import { ProjectCard } from "@/components/projects/project-card";
 import { Briefcase } from "lucide-react";
 
 const projects = [
   {
-    name: "Celestial Protocol",
-    role: "Lead Community Manager & KOL",
-    description: "A revolutionary DeFi protocol focusing on sustainable yield generation through algorithmic trading strategies and cross-chain interoperability.",
+    name: "Rune Stone NFT",
+    role: "Lead Ambassador",
+    description: "Runeston is an NFT collection created for the community on the TON blockchain",
     links: {
-      twitter: "https://twitter.com/CelestialFi",
-      telegram: "https://t.me/CelestialFi",
-      discord: "https://discord.gg/celestial"
-    }
+      twitter: "https://twitter.com/RunestonNFT",
+      telegram: "https://t.co/fgbSpoqnQS",
+    },
+    duration: "2024"
   },
   {
     name: "Nova Network",
@@ -23,7 +23,8 @@ const projects = [
       twitter: "https://twitter.com/NovaNetwork",
       telegram: "https://t.me/NovaNetwork",
       discord: "https://discord.gg/nova"
-    }
+    },
+    duration: "2023 - 2024"
   },
   {
     name: "Quantum Finance",
@@ -33,24 +34,25 @@ const projects = [
       twitter: "https://twitter.com/QuantumFi",
       telegram: "https://t.me/QuantumFi",
       discord: "https://discord.gg/quantum"
-    }
+    },
+    duration: "2023"
   }
 ];
 
-export default function ResumePage() {
+export default function ProjectsPage() {
   return (
     <div className="min-h-screen bg-[#eee5d3]">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
-        <div className="absolute inset-0">
+        {/* <div className="absolute inset-0">
           <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10"></div>
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
-            className="absolute inset-0 bg-gradient-to-b from-[#1a53f8]/90 to-transparent"
+            className="absolute inset-0 bg-gradient-to-b from-slate-800/90 to-transparent"
           />
-        </div>
+        </div> */}
 
         {/* Hero Content */}
         <div className="relative pt-32 pb-24 px-4 sm:px-6 lg:px-8">
@@ -66,19 +68,19 @@ export default function ResumePage() {
               transition={{ duration: 0.5 }}
               className="mb-8 inline-block"
             >
-              <div className="w-20 h-20 mx-auto rounded-3xl bg-gradient-to-br from-[#1a53f8] to-[#1a53f8]/60 p-5 shadow-xl">
+              <div className="w-20 h-20 mx-auto rounded-3xl bg-gradient-to-br from-slate-800 to-slate-600 p-5 shadow-xl">
                 <Briefcase className="w-full h-full text-[#eee5d3]" />
               </div>
             </motion.div>
-            
+
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.8 }}
-              className="text-4xl md:text-6xl font-bold text-[#eee5d3] mb-6"
+              className="text-4xl md:text-6xl font-bold text-slate-800 mb-6"
             >
               Project Experience
-              <span className="block text-2xl md:text-3xl font-normal mt-2 text-blue-100/90">
+              <span className="block text-2xl md:text-3xl font-normal mt-2 text-slate-600/70">
                 Building the Future of Web3
               </span>
             </motion.h1>
@@ -92,8 +94,8 @@ export default function ResumePage() {
           transition={{ delay: 0.6, duration: 1 }}
           className="absolute inset-0 pointer-events-none"
         >
-          <div className="absolute top-1/4 left-0 w-72 h-72 bg-[#1a53f8] rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob" />
-          <div className="absolute top-1/3 right-0 w-72 h-72 bg-[#1a53f8]/60 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000" />
+          <div className="absolute top-1/4 left-0 w-72 h-72 bg-slate-800 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob" />
+          <div className="absolute top-1/3 right-0 w-72 h-72 bg-slate-600/60 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000" />
         </motion.div>
       </div>
 

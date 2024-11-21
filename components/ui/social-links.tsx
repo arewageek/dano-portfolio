@@ -1,30 +1,30 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Github, Twitter, Linkedin } from "lucide-react";
+import { FaDiscord, FaTelegramPlane, FaTwitter } from "react-icons/fa"
 
-const socialLinks = [
-  {
-    name: "Twitter",
-    icon: Twitter,
-    href: "https://twitter.com",
-    color: "hover:text-blue-400"
-  },
-  {
-    name: "GitHub",
-    icon: Github,
-    href: "https://github.com",
-    color: "hover:text-zinc-600"
-  },
-  {
-    name: "LinkedIn",
-    icon: Linkedin,
-    href: "https://linkedin.com",
-    color: "hover:text-blue-600"
-  }
-];
 
-export function SocialLinks() {
+export function SocialLinks({ links }: { links: { discord: string, telegram: string, twitter: string } }) {
+  const socialLinks = [
+    {
+      name: "Twitter",
+      icon: FaTwitter,
+      href: links.twitter,
+      color: "hover:text-blue-400"
+    },
+    {
+      name: "Discord",
+      icon: FaDiscord,
+      href: links.discord,
+      color: "hover:text-zinc-600"
+    },
+    {
+      name: "Telegram",
+      icon: FaTelegramPlane,
+      href: links.telegram,
+      color: "hover:text-blue-600"
+    }
+  ];
   return (
     <div className="flex space-x-4">
       {socialLinks.map((social) => {
