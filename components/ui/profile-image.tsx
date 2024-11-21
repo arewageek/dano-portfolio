@@ -15,7 +15,7 @@ export function ProfileImage({ photo }: { photo: string }) {
       }}
       className="relative"
     >
-      <div className="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden ring-4 ring-zinc-800/10 shadow-xl">
+      <div className="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden ring-4 ring-slate-800/10 shadow-xl">
         <Image
           src={photo}
           alt="Profile"
@@ -25,7 +25,7 @@ export function ProfileImage({ photo }: { photo: string }) {
         />
       </div>
       {/* <motion.div
-        className="absolute -bottom-2 -right-2 bg-zinc-800 text-white p-3 rounded-full shadow-lg"
+        className="absolute -bottom-2 -right-2 bg-slate-800 text-white p-3 rounded-full shadow-lg"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
       >

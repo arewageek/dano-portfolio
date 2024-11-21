@@ -6,8 +6,8 @@ import { Navbar } from '@/components/layout/navbar';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Crypto Portfolio',
-  description: 'Professional portfolio showcasing crypto expertise and experience',
+  title: 'Dano Crypt',
+  description: 'KOL and Project Ambassador',
 };
 
 export default function RootLayout({

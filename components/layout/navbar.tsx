@@ -5,19 +5,20 @@ import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import CONFIG from "@/app-config";
 
 const menuItems = [
   { href: "/", label: "Home" },
   { href: "/projects", label: "Projects" },
   { href: "/services", label: "Services" },
-  { href: "/hire-me", label: "Hire Me", isButton: true },
+  { href: CONFIG.telegram, label: "Hire Me", isButton: true },
 ];
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed w-full z-50 bg-[#eee5d3]/80 backdrop-blur-sm border-b border-zinc-800/10">
+    <nav className="fixed w-full z-50 bg-[#eee5d3]/80 backdrop-blur-sm border-b border-slate-800/20 shadow">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <motion.div
@@ -25,8 +26,8 @@ export function Navbar() {
             animate={{ opacity: 1, x: 0 }}
             className="flex-shrink-0"
           >
-            <Link href="/" className="text-2xl font-bold text-zinc-800">
-              Dano<span className="text-zinc-600">Crypt</span>
+            <Link href="/" className="text-2xl font-bold text-slate-800">
+              Dano<span className="text-slate-600">Crypt</span>
             </Link>
           </motion.div>
 
@@ -44,8 +45,8 @@ export function Navbar() {
                   className={cn(
                     "transition-colors",
                     item.isButton
-                      ? "px-4 py-2 bg-zinc-800 text-white rounded-full hover:bg-zinc-700"
-                      : "text-zinc-600 hover:text-zinc-800"
+                      ? "px-4 py-2 bg-slate-800 text-white rounded-full hover:bg-slate-700"
+                      : "text-slate-600 hover:text-slate-800"
                   )}
                 >
                   {item.label}
@@ -59,7 +60,7 @@ export function Navbar() {
             initial={false}
             animate={{ rotate: isOpen ? 90 : 0 }}
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 rounded-md text-zinc-600 hover:text-zinc-800"
+            className="md:hidden p-2 rounded-md text-slate-600 hover:text-slate-800"
           >
             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </motion.button>
@@ -89,8 +90,8 @@ export function Navbar() {
                     className={cn(
                       "block transition-colors",
                       item.isButton
-                        ? "px-4 py-2 bg-zinc-800 text-white rounded-full hover:bg-zinc-700 text-center"
-                        : "text-zinc-600 hover:text-zinc-800"
+                        ? "px-4 py-2 bg-slate-800 text-white rounded-full hover:bg-slate-700 text-center"
+                        : "text-slate-600 hover:text-slate-800"
                     )}
                   >
                     {item.label}

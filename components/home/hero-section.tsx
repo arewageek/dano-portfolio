@@ -43,17 +43,17 @@ export function HeroSection() {
         variants={itemVariants}
         className="text-center space-y-4"
       >
-        <h1 className="text-4xl md:text-6xl font-bold text-zinc-800">
+        <h1 className="text-4xl md:text-6xl font-bold text-slate-800">
           {name}
         </h1>
-        <h2 className="text-xl md:text-2xl text-zinc-600 font-medium">
+        <h2 className="text-xl md:text-2xl text-slate-600 font-medium">
           {role}
         </h2>
       </motion.div>
 
       <motion.p
         variants={itemVariants}
-        className="max-w-2xl text-center text-zinc-600"
+        className="max-w-2xl text-center text-slate-600"
       >
         Bridging the gap between innovative blockchain projects and their communities.
         Passionate about creating meaningful connections in the Web3 space.

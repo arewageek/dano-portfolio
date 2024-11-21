@@ -16,7 +16,7 @@ export function SocialLinks({ links }: { links: { discord: string, telegram: str
       name: "Discord",
       icon: FaDiscord,
       href: links.discord,
-      color: "hover:text-zinc-600"
+      color: "hover:text-slate-600"
     },
     {
       name: "Telegram",
