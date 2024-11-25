@@ -8,9 +8,9 @@ import { cn } from "@/lib/utils";
 import CONFIG from "@/app-config";
 
 const menuItems = [
-  { href: "/", label: "Home" },
-  { href: "/projects", label: "Projects" },
-  { href: "/services", label: "Services" },
+  { href: "#", label: "Home" },
+  { href: "#projects", label: "Projects" },
+  { href: "#services", label: "Services" },
   { href: CONFIG.telegram, label: "Hire Me", isButton: true },
 ];
 

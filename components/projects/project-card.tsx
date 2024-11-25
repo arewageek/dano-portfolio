@@ -2,9 +2,9 @@
 
 import { motion } from "framer-motion";
 import { Twitter, MessageCircle, MessagesSquare } from "lucide-react";
-import { FaDiscord, FaTelegramPlane, FaTwitter } from "react-icons/fa";
+import { FaDiscord, FaGlobe, FaLink, FaTelegramPlane, FaTwitter } from "react-icons/fa";
 
-interface ProjectCardProps {
+export interface IProject {
   name: string;
   role: string;
   description: string;
@@ -12,12 +12,13 @@ interface ProjectCardProps {
     twitter?: string;
     telegram?: string;
     discord?: string;
+    website?: string
   };
   index: number;
   duration: string
 }
 
-export function ProjectCard({ name, role, description, links, index, duration }: ProjectCardProps) {
+export function ProjectCard({ name, role, description, links, index, duration }: IProject) {
   const cardVariants = {
     hidden: {
       opacity: 0,
@@ -112,6 +113,17 @@ export function ProjectCard({ name, role, description, links, index, duration }:
               className="w-10 h-10 rounded-xl bg-gradient-to-r from-slate-800 to-slate-800/60 p-2.5 text-white shadow-lg hover:shadow-slate-800/25 transition-shadow duration-300"
             >
               <FaDiscord className="w-full h-full" />
+            </motion.a>}
+
+            {links.website && <motion.a
+              href={links.website}
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+              className="w-10 h-10 rounded-xl bg-gradient-to-r from-slate-800 to-slate-800/60 p-2.5 text-white shadow-lg hover:shadow-slate-800/25 transition-shadow duration-300"
+            >
+              <FaLink className="w-full h-full" />
             </motion.a>}
           </div>
         </div>

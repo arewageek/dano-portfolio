@@ -51,7 +51,7 @@ const services = [
 
 export default function ServicesPage() {
   return (
-    <div className="min-h-screen bg-[#eee5d3]">
+    <div className="min-h-screen bg-[#eee5d3]" id="services">
       <div className="relative overflow-hidden">
         {/* Hero Background */}
         {/* <div className="absolute inset-0 bg-[#eee5d3]">

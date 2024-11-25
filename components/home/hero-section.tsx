@@ -36,6 +36,7 @@ export function HeroSection() {
       initial="hidden"
       animate="visible"
       className="flex flex-col items-center justify-center min-h-screen px-4 py-16 space-y-8 pt-24"
+      id="hero"
     >
       <ProfileImage photo={photo} />
 

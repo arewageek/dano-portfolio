@@ -1,12 +1,13 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ProjectCard } from "@/components/projects/project-card";
+import { IProject, ProjectCard } from "@/components/projects/project-card";
 import { Briefcase } from "lucide-react";
 
-const projects = [
+const projects: IProject[] = [
   {
     name: "Rune Stone NFT",
+    index: 0,
     role: "Lead Ambassador",
     description: "Runeston is an NFT collection created for the community on the TON blockchain",
     links: {
@@ -16,32 +17,35 @@ const projects = [
     duration: "2024"
   },
   {
-    name: "Nova Network",
-    role: "Strategic Advisor",
-    description: "Layer-1 blockchain platform pioneering in scalable smart contract solutions with a focus on enterprise adoption and cross-chain compatibility.",
+    name: "Brokie Inu",
+    index: 1,
+    role: "Ambassador",
+    description: "Brokie Inu symbolises hard core resilience. For all degens that have been rug pulled, liquidated trading on leverage by scam wicks, scammed by fraudulent crypto projects",
     links: {
-      twitter: "https://twitter.com/NovaNetwork",
-      telegram: "https://t.me/NovaNetwork",
-      discord: "https://discord.gg/nova"
+      twitter: "https://x.com/BrokieInu",
+      telegram: "https://t.me/brokieinus",
+      // discord: "https://discord.gg/ton"
+      website: "https://brokieinu.wtf/"
     },
-    duration: "2023 - 2024"
+    duration: "2024"
   },
   {
-    name: "Quantum Finance",
-    role: "Brand Ambassador",
-    description: "Decentralized derivatives platform leveraging quantum computing principles for advanced trading algorithms and risk management.",
+    name: "STON.fi",
+    index: 2,
+    role: "Ambassador",
+    description: "A decentralized automated market maker (AMM) built on the TON blockchain providing virtually zero fees, low slippage, an extremely easy interface, and direct integration with TON wallets",
     links: {
-      twitter: "https://twitter.com/QuantumFi",
-      telegram: "https://t.me/QuantumFi",
-      discord: "https://discord.gg/quantum"
+      twitter: "https://x.com/ston_fi",
+      telegram: "https://t.me/stonfidex",
+      website: "https://ston.fi"
     },
-    duration: "2023"
+    duration: "2024"
   }
 ];
 
 export default function ProjectsPage() {
   return (
-    <div className="min-h-screen bg-[#eee5d3]">
+    <div className="min-h-screen bg-[#eee5d3]" id="projects">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         {/* <div className="absolute inset-0">
@@ -50,7 +54,7 @@ export default function ProjectsPage() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
-            className="absolute inset-0 bg-gradient-to-b from-slate-800/90 to-transparent"
+            className="absolute inset-0 bg-gradient-to-b from-slate-800/90 tos,sx,xx,,c,,c-transparent"
           />
         </div> */}
 
